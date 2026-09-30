@@ -35,3 +35,4 @@ test("Navigation links are present", () => {
     })
   ).toBeInTheDocument();
 });
+
