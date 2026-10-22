@@ -1,12 +1,10 @@
-
 import React from "react";
 
 function Home() {
   return (
-    <div className="page">
+    <div>
       <h2>Home</h2>
       <p>Welcome to the Home Page.</p>
-      <p>This is my React website.</p>
     </div>
   );
 }

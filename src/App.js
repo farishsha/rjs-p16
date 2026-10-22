@@ -1,28 +1,31 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import Navigation from "./Navigation";
 
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/rjs-p16">
-      <header>
+    <BrowserRouter>
+      <div>
         <h1>My React Website</h1>
 
-        <nav>
-          <Link to="/">Home</Link>{" "}
-          <Link to="/aboutus">About Us</Link>{" "}
-          <Link to="/contactus">Contact Us</Link>
-        </nav>
-      </header>
+        <Navigation />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<About />} />
-        <Route path="/contactus" element={<Contact />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/contactus" element={<Contact />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
